@@ -1,15 +1,12 @@
-let value=(num1,num2,num3)=>{
-    if(num1>num2 && num1>num3){
-        console.log("num1 is largest")
-        if(num2<num3){
-            console.log("num2 is largest")
-        }
-        else {
-            console.log("num3 is largest")
-        }
+let shapes=(a,b,c)=>{
+    if(a==b && b==c && a==c){
+    console.log("Equilateral triangle.")
     }
-    else{
-        console.log("num2 is largest")
+    else if(a==b || b==c){
+    console.log("Isosceles triangle.")
     }
-    } 
-    value(23,22,10)
+    else {
+        console.log("Scalene triangle")
+    }
+}
+shapes(10,10,10)
