@@ -1,12 +1,11 @@
-let shapes=(a,b,c)=>{
-    if(a==b && b==c && a==c){
-    console.log("Equilateral triangle.")
-    }
-    else if(a==b || b==c){
-    console.log("Isosceles triangle.")
-    }
-    else {
-        console.log("Scalene triangle")
-    }
-}
-shapes(10,10,10)
+  var num2=(num)=>{
+        var num= prompt("enter a number")
+  for(num;num<=50;num++){
+      if (num>=20 && num<=50){
+    console.log(num,"Between the range");
+  } else {
+    console.log(num,"Outside the range");
+  }
+  }
+  }
+  num2()
