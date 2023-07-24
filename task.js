@@ -1,11 +1,24 @@
-  var num2=(num)=>{
-        var num= prompt("enter a number")
-  for(num;num<=50;num++){
-      if (num>=20 && num<=50){
-    console.log(num,"Between the range");
-  } else {
-    console.log(num,"Outside the range");
-  }
-  }
-  }
-  num2()
+var num1=parseInt(prompt("enter a number"))
+var num2=parseInt(prompt("enter a number"))
+var answer=prompt("enter a number")
+var num=(num1,num2,answer)=>{
+    if(answer==="add" || answer==="+"){
+        console.log("Result :",num1+num2)
+    }
+    else if(answer==="subtract" ||answer==="-"){
+        coonsole.log("Result : ",num1-num2)
+    }
+    else if(answer==="multiply" ||answer==="*"){
+        console.log("Result :",num1*num2)
+    }
+    else if(answer==="divide" || answer==="/"){
+        console.log("Result :",num1/num2)
+    }
+    else if(answer==="modulos" || answer==="%"){
+        console.log("Result :",num1%num2)
+    }
+    else{
+        console.log("the expression is invalid")
+    }
+}
+num(num1,num2,answer)
