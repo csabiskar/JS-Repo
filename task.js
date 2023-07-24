@@ -1,19 +1,10 @@
-var num=parseInt(prompt("enter a number"))
-var gardeSystem=()=>{
-    if(num>=90 && num<=100){
-        console.log("A Grade")
-    }
-    else if(num>=70 && num<=90){
-        console.log(" B Grade")
-    }
-     else if(num>=50 && num<=70){
-        console.log(" C Grade")
-    }
-     else if(num>=35 && num<=50){
-        console.log(" D Grade")
+let checkLeapYear=()=>{
+    let num=prompt("enter a number")
+    if(num%4 ===0 & num%100 !=0 || num%400===0){
+        console.log(num," is leap year")
     }
     else{
-        console.log("you failed")
+        console.log(num,"is not a leap year")
     }
 }
-gardeSystem()
+checkLeapYear()
