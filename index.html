@@ -1,29 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <p>
-        Test Data :
-           console.log(decimals(2.100212, 2));
-           console.log(decimals(2.100212, 3));
-           console.log(decimals(2100, 2));
-           "2.10"
-           "2.100"
-           "2100.00"
-
-
+    <p>Natural numbers are whole numbers from 1 upwards : 1, 2, 3, and so on ... or from 0 upwards in some area of
+        mathematics: 0, 1, 2, 3 and so on ...
+        No negative numbers and no fractions.
+        Test Data:
+        console.log(is_Natural(-15));
+        console.log(is_Natural(1));
+        console.log(is_Natural(10.22));
+        console.log(is_Natural(10/0));
     </p>
     <script>
-               let a=2.100212
-               let b=2.100212
-               console.log(a.toFixed(2))
-               console.log(b.toFixed(3))
-               let c=2100
-               console.log(c.toFixed(2))
+        let wholenum = (a) => {
+            if (a >= 0 && Math.floor(a) == a) {
+                return true
+            }
+            else {   
+                return false
+            }
+        }
+        console.log(wholenum(10.5))
     </script>
 </body>
+
 </html>
