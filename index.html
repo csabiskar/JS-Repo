@@ -59,8 +59,6 @@
     <div class="container_1 ">
         <div>
             <input type="text" id="cout" class="inp1">
-
-
             <div class="mt-2">
                 <button type="button" class="btn btn-primary" onclick="a('7')">7</button>
                 <button type="button" class="btn btn-primary" onclick="a('8')">8</button>
@@ -88,23 +86,7 @@
 
         </div>
     </div>
-    <script>
-        let value = 0
-        // functiuon for button
-        let a = (value) => {
-            document.getElementById("cout").value += value;
-        }
-        // func() for clear
-        let b = () => {
-
-            document.getElementById("cout").value = ""
-        }
-        //  fnc() evalivate
-        let c = () => {
-            let result = document.getElementById('cout').value
-            document.getElementById('cout').value = eval(result);
-        }
-    </script>
+    <script src="calc.js"></script>
 </body>
 
 </html>
