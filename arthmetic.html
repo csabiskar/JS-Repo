@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+  
+    <input type="text" id="cout">
+    <p id="p"></p>
+    <form action="">
+        <!-- <input type="button" name="" id="btn1" value="1" onclick="add('1')">
+        <input type="button" name="" id="btn1" value="2" onclick="add('2')"> -->
+        <input type="button" name="" id="btn1" value="+" onclick="add('+')">
+        <input type="button" name="" id="btn1" value="-" onclick="add('-')">
+        <input type="button" name="" id="btn1" value="/" onclick="add('/')">
+        <input type="button" name="" id="btn1" value="*" onclick="add('*')">
+        <input type="button" name="" id="btn1" value="%" onclick="add('%')">
+        <input type="reset" name="" id="btn1" value="=" onclick="c()">
+        <input type="reset" name="" id="btn1" value="c" onclick="b()">
+        
+    </form>
+    <script>
+        let value = 0
+        let add = (value) => {
+            document.getElementById("cout").value += value
+        }
+        let b = () => {
+            document.getElementById("cout").value = " "
+        }
+        let c = () => {
+            let result = document.getElementById('cout').value
+            //document.getElementById('cout').value = eval(result);
+            let f=document.getElementById("p")
+            f.textContent="= "+eval(result)
+        }
+    </script>
+</body>
+
+</html>

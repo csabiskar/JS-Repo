@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Date Calculator</title>
+</head>
+<body>
+  <label for="userDate">Enter a date: </label>
+  <input type="date" id="userDate">
+  <button onclick="calculateDates()">Calculate Dates</button>
+
+  <h3>Dates with +/- 5 days:</h3>
+  <label for="datePlusFive">Date + 5 days: </label>
+  <input type="text" id="datePlusFive" readonly>
+  <br>
+  <label for="dateMinusFive">Date - 5 days: </label>
+  <input type="text" id="dateMinusFive" readonly>
+
+  <script>
+    function calculateDates() {
+      var userInput = document.getElementById("userDate").value;
+      var inputDate = new Date(userInput);
+
+      var datePlusFive = new Date(inputDate);
+      datePlusFive.setDate(inputDate.getDate() + 5);
+      var formattedPlusFive = formatDate(datePlusFive);
+
+      var dateMinusFive = new Date(inputDate);
+      dateMinusFive.setDate(inputDate.getDate() - 5);
+      var formattedMinusFive = formatDate(dateMinusFive);
+
+      document.getElementById("datePlusFive").value = formattedPlusFive;
+      document.getElementById("dateMinusFive").value = formattedMinusFive;
+    }
+
+    function formatDate(date) {
+      var year = date.getFullYear();
+      var month = String(date.getMonth() + 1).padStart(2, '0');
+      var day = String(date.getDate()).padStart(2, '0');
+      return `${year}-${month}-${day}`;
+    }
+  </script>
+</body>
+</html>

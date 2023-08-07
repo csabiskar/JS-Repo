@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="password"id="new">password</label>
+    <input type="text" id="password">
+    <!-- <label for="password">Re-enter password</label>
+    <input type="password" id="password"> -->
+    <button onclick=pagePass()>submit</button>
+    <script>
+          let pagePass=()=>{
+        let a=document.querySelector("#password").value
+        let b=document.querySelector("#new")
+        let regex=/(^[A-Z]+[a-z \W \w])*$/
+            if(regex.test(a)){
+              b.textcontent="hai"
+              console.log(a)
+            }
+            else{
+                alert("invalid")
+            }
+        }
+    </script>
+</body>
+</html>

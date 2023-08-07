@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta nam10e="viewport" content="width=de0vice-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <ul id="ul"></ul>
+   <p id="p"></p>
+    <script>
+        fetch("company.json")
+        .then((a)=>a.json())
+        .then((b)=>{
+        //      localStorage.setItem("cart",JSON.stringify(b))
+        //     //console.log(b)
+        //    let c= localStorage.getItem("cart")
+        //    let e=JSON.parse(c)
+           //console.log(b)
+           //console.log(b)
+           for(let i=0;i<b.length;i++){
+               
+            //    let paraEl = document.getElementById("ul")
+            //    let studentLi = document.createElement("li")
+            //    paraEl.appendChild(studentLi)
+            //    studentLi.textContent += b.todos[i].id + " . "
+            //    studentLi.textContent += b.todos[i].todo + " => "
+            //    studentLi.textContent += b.todos[i]. userId
+               
+             document.getElementById("p").textContent += b[i].company +" "+ b[i].ceo
+                //let dataParse = JSON.parse(getValue)
+
+            //    dataParse.textContent += b[i]
+                 //console.log(b[i].Name)
+           }
+        })
+    </script>
+</body>
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<!-- <input type="text" id="hi">
+<button onclick="b()">click</button> -->
+<ol id="ul"></ol>
+<script>
+        fetch("https://dummyjson.com/carts")
+        .then(a=>a.json())
+        //console.log(a)
+        .then(b =>{
+            for(let i=0;i<b.carts.length;i++){
+                let ulEl=document.getElementById("ul")
+                let liEl=document.createElement("li")
+                liEl.setAttribute("type","1")
+                ulEl.appendChild(liEl)
+                liEl.textContent+=b.carts[i].products[1].price
+                console.log(b)
+        }})
+       
+        .catch(e=>console.log("u have an error",e))
+
+    // class Car{
+    //     constructor(name,course){
+    //         // this.a=name
+    //         // this.b=course
+    //         document.write(name,'<br>',course)
+    //     }
+    //     Tyre(){
+    //         document.write("alloy")
+    //     }
+    // }
+
+    // class Bike extends Car{
+    //     constructor(){
+    //         document.write("Bike constructor")
+    //     }
+    //     bike(){
+    //         document.write("bike")
+    //     }
+    // }
+    // let bike = new Bike("praba","web developer")
+    // bike.Tyre()
+    
+    // equal value 
+
+    // let a=prompt("Password")
+    // let b=prompt(`Re-enter Your password`)
+    // if(a==b){
+    //     console.log("your passwords are equal")
+    // }
+    // else{
+    //     console.log("your password not equal")
+    // }
+    
+// let b=()=>{
+// let a=document.getElementById("hi")
+// let c=a.value
+// alert(c)
+// }
+// </script>
+</body>
+
+</html>

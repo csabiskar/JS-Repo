@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+        <input type="text" id="num" placeholder="enter num">
+        <input type="submit" onclick="changeEvent()" value="submit" id="btn">
+
+
+    <ul id="ulList"></ul>
+    <p id="para"></p>
+    <script>
+        let paraEl = document.getElementById("para")
+        let inputEl = document.getElementById("num")
+       
+        let buttonEl = document.getElementById("btn")
+        let ulListEl = document.getElementById("ulList")
+
+        function changeEvent() {
+            let inputVal = inputEl.value
+            let e=document.createElement("li")
+                //e.value=d
+                e.textContent=inputVal
+                ulListEl.appendChild(e)
+                inputEl.value=""
+                console.log(e)
+        }
+
+        inputEl.addEventListener("keydown", (e) => {
+            if (e.key =="Enter") {
+                changeEvent()
+            }
+
+        })
+
+    </script>
+</body>
+
+</html>

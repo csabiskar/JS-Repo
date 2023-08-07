@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+        fetch("value.json")
+        .then((a)=>a.json())
+        .then((b)=>{
+           // console.log(b)
+
+            localStorage.setItem("student",JSON.stringify(b))
+
+            let c=localStorage.getItem("student")
+            let d=JSON.parse(c)
+
+          //  console.log(d)
+
+        //    console.log(d[0].Name)
+            document.getElementById("p").textContent=d[0].id[0]
+        })
+    </script>
+</body>
+</html>

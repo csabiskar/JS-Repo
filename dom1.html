@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom</title>
+</head>
+
+<body>
+    <form action="">
+        <input type="text" id="hi">
+        <input type="reset" id="btn" onclick="change()" value="submit "></button>
+    </form>
+
+    <script>
+        let d = document.createElement("h4")
+        document.body.appendChild(d)
+        d.textContent = "My Cart Items"
+
+        let e = document.createElement("ul")
+        e.setAttribute("id", "ul")
+        document.body.appendChild(e)
+
+        function change() {
+
+            let name = document.getElementById("hi").value
+            console.log(name)
+            let ulEl = document.getElementById("ul")
+            let liEl = document.createElement("li")
+            liEl.setAttribute("class", "list")
+            ulEl.appendChild(liEl)
+
+            name.textContent = ""
+            for (let i = 0; i < name.length; i++) {
+                liEl.textContent = name
+                name.reset()
+            }
+        }
+    </script>
+</body>
+
+</html>
+</body>
+
+</html>

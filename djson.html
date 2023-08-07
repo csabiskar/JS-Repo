@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="p"></p>
+    <script>
+         fetch("company.json")
+        .then((a)=>a.json())
+        .then((b)=>{
+            for(let i=0;i<b.length;i++){
+                document.getElementById("p").textContent += b[i].company +" "+ b[i].ceo
+            }
+        })
+    </script>
+</body>
+</html>

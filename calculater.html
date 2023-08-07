@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet"integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
+</head>
+<style>
+    div{
+        width: 200px;
+        height: 200px;
+    }
+    body{
+        width: 100vw;
+        height: 100vh;
+    }
+</style>
+<body class="d-flex flex-row justify-content-center align-items-center">
+    <div class="">
+       <div>
+        <h1 id="cin_1"></h1>
+        <h1 id="cin_2"></h1>
+        <h1 id="op"></h1>
+        <h1 id="res"></h1>
+        <h1 id="result"></h1>
+        <h1></h1>
+       </div>
+       <div class="gap-2 mt-5">
+        <button type="button" class="btn btn-primary"  onclick="add_1()">5</button>
+        <button type="button" class="btn btn-secondary" onclick="add_2()">5</button>
+        <button type="button" class="btn btn-success" onclick="str()">+</button>
+        <button type="button" class="btn btn-success" onclick="op()">=</button>
+        <button type="button" class="btn btn-info" onclick="Reset()">Ac</button>
+       </div>
+       
+    </div>
+    <script>
+        let headEl_1=document.getElementById("cin_1")
+        let headEl_2=document.getElementById("cin_2")
+        let headEl_3=document.getElementById("op")
+        let headEl_4=document.getElementById("res")
+        let headEl_5=document.getElementById("result")
+        let b=5
+        let c=5
+        let add_1=()=>{
+          //let num_1=b
+          headEl_1.textContent=b
+        }
+        let add_2=()=>{
+            //let num_2=c
+            headEl_2.textContent=c
+        }
+        let str=()=>{
+         headEl_3.textContent="+"
+        }
+        let op=()=>{
+                let res=eval(b+c)
+         headEl_4.textContent=res  
+        }
+        let Reset=()=>{
+            let value=0
+            headEl_1.textContent=value
+            headEl_2.textContent=value
+            headEl_3.textContent=value
+            headEl_4.textContent=value
+            headEl_5.textContent=value
+            value=0
+        }
+    </script>
+</body>
+</html>

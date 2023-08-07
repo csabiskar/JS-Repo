@@ -1,0 +1,49 @@
+div{
+    height: 300px;
+    width: 300px;
+    background-color: rgb(0, 255, 106);
+    position: relative;
+    left: 450px;
+    top: 150px;
+    box-shadow: 0px 0px 10px 5px rgb(59, 242, 255);
+}
+div:hover{
+    transform: rotate(360deg);
+    transition-duration: 3000ms;
+    border-radius: 15px;
+}
+.div1{
+    height: 250px;
+    width: 250px;
+    background-color: rgb(108, 11, 11);
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.div1:hover{
+    transform: rotate(360deg);
+    transition-duration: 3000ms;
+    border-radius: 15px;   
+}
+.div2{
+    height: 200px;
+    width: 200px;
+    background-color: rgb(36, 255, 200);
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+.div2:hover{
+    transform: skew(36000000deg);
+    transition-duration: 10000ms;
+    border-radius: 50%; 
+}
+h1{
+    position: relative;
+    top: 60px;
+    left: 4 0px;
+}
+img{
+    width: 200px;
+    height: 200px;
+}

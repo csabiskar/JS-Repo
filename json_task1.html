@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ol id="p1"></ol>
+    <p id="p"></p>
+    <script>
+        fetch("https://dummyjson.com/carts")
+        .then((a)=>a.json())
+        .then((b)=>{
+            // localStorage.setItem("company",JSON.stringify(b))
+            //  console.log(b)
+            //  let c=localStorage.getItem("company")
+            //  let d=JSON.parse(c)
+            // console.log(d)
+            for(let i=0;i<b.carts.length;i++){
+                let a=document.createElement("li")
+                a.setAttribute("type","1")
+                let c=document.getElementById("p1")
+                c.appendChild(a)
+                a.textContent+=b.carts[i].products[1].price
+                console.log(a)
+            }
+        })
+        .catch(e=>console.log("erroe with ",e))
+    </script>
+</body>
+</html>
